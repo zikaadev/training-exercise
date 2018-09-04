@@ -4,7 +4,7 @@
         "title": "Product1",
         "description": "description1",
         "price": 5,
-        "image": "../assets/images/img1.png,",
+        "image": "img1.png,",
         "quantity": "4"
     },
     {
@@ -12,7 +12,7 @@
         "title": "Product2",
         "description": "description2",
         "price": 23,
-        "image": "../assets/images/img2.png",
+        "image": "img2.png",
         "quantity": "7"
     },
     {
@@ -20,7 +20,7 @@
         "title": "Product3",
         "description": "description3",
         "price": 25,
-        "image": "../assets/images/img3.png",
+        "image": "img3.png",
         "quantity": "37"
     },
     {
@@ -28,7 +28,7 @@
         "title": "Product4",
         "description": "description4",
         "price": 4,
-        "image": "../assets/images/img4.png",
+        "image": "img4.png",
         "quantity": "2"
     },
     {
@@ -36,7 +36,7 @@
         "title": "Product5",
         "description": "description5",
         "price": 12,
-        "image": "../assets/images/img5.png",
+        "image": "img5.png",
         "quantity": "69"
     },
     {
@@ -44,7 +44,7 @@
         "title": "Product6",
         "description": "description6",
         "price": 44,
-        "image": "../assets/images/img6.png",
+        "image": "img6.png",
         "quantity": "6"
     },
     {
@@ -52,7 +52,7 @@
         "title": "Product7",
         "description": "description7",
         "price": 45,
-        "image": "../assets/images/img7.png",
+        "image": "img7.png",
         "quantity": "7"
     },
     {
@@ -60,7 +60,7 @@
         "title": "Product8",
         "description": "description8",
         "price": 29,
-        "image": "../assets/images/img8.png",
+        "image": "img8.png",
         "quantity": "58"
     },
     {
@@ -68,7 +68,7 @@
         "title": "Product9",
         "description": "description9",
         "price": 99,
-        "image": "../assets/images/img9.png",
+        "image": "img9.png",
         "quantity": "7"
     },
     {
@@ -76,7 +76,7 @@
         "title": "Product10",
         "description": "description10",
         "price": 77,
-        "image": "../assets/images/img10.png",
+        "image": "img10.png",
         "quantity": "7"
     }
 ]

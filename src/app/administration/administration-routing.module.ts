@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdministrationComponent } from './administration.component';
 
 const routes: Routes = [
-        { path: 'administration/administration', component: AdministrationComponent }
+        { path: 'administration', component: AdministrationComponent }
 ];
 
 
