@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~font-awesome/css/font-awesome.min.css";
+
+body{padding: 10px;}
+
+.distance { margin-left: 30px;}
+/* .navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+} */

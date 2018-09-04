@@ -1,0 +1,19 @@
+<div class="container">
+<hr>
+
+<div>
+  <nav class="navbar navbar-expand navar-light bg-light">
+    <a [routerLink]="['/home']" class="navbar-brand">{{pageTitle}}</a>
+    <ul class="nav nav-pills">
+      <li><a [routerLink]="['./products']" class="navbar-link distance">Products</a></li>
+      <li><a [routerLink]="['/administration']" class="navbar-link distance">Administration</a></li>
+    </ul>
+  </nav>
+</div>
+
+<hr>
+  <router-outlet></router-outlet>
+
+</div>
+
+
