@@ -1,0 +1,7 @@
+{
+	"demo": {
+		"greeting": "Hello {{name}}!",
+		"title": "ngx-translate example"
+    },
+    "pageTitle": "jjjjjjjjjjjj"
+}

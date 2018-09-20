@@ -13,7 +13,7 @@ export class ProductDetailsComponent implements OnInit {
     this.products = this.helperService.getProduct();
   }
 
-  pageTitle = 'Product-details page';
+  pageTitle = 'Check out our Products';
   products: Product[];
 
 
