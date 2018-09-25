@@ -11,7 +11,7 @@
             translate:param}}</a></li>
         <li>
           <select style="float: right; margin-left: 600px;" (change)="setLanguage($event.target.value)">
-            <option value="--Select--">{{ 'nav.selectLanguage' | translate: param}}</option>
+            <option value="--Select--" disabled>{{ 'nav.selectLanguage' | translate: param}}</option>
             <option value="en" ng-selected="language === 'en'">{{'nav.english' | translate: param}}</option>
             <option value="de" ng-selected="language === 'de'">{{'nav.german' | translate: param}}</option>
             <option value="sp" ng-selected="language === 'sp'">{{'nav.spanish' | translate: param}}</option>

@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   constructor(
     private translateService: TranslateService, ) {
     translateService.addLangs(['en', 'de', 'sp']);
-    // translateService.use('sp');
   }
 
   ngOnInit(): void {
@@ -28,8 +27,6 @@ export class AppComponent implements OnInit {
 
   getLanguage() {
     this.language = localStorage.getItem(('language'));
-    console.log(localStorage.getItem('language'));
-    console.log('language: ' + this.language);
     return this.language;
   }
 
@@ -37,6 +34,5 @@ export class AppComponent implements OnInit {
     localStorage.setItem('language', lang);
     this.language = this.getLanguage();
     this.translateService.use(localStorage.getItem('language'));
-    // this.translateService.use(this.language);
   }
 }
