@@ -12,6 +12,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { HomeModule } from './home/home.module';
+import { NgxLocalStorageModule } from 'ngx-localstorage';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -32,6 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdministrationModule,
     HomeModule,
     CoreModule,
+    NgxLocalStorageModule.forRoot(),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -41,7 +44,9 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'de' }],
+  providers: [
+    // { provide: LOCALE_ID, useValue: 'de' }
+  ],
   exports: [TranslateModule],
   bootstrap: [AppComponent]
 })
