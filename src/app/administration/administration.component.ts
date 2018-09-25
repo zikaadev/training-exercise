@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   // selector: 'app-administration',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdministrationComponent implements OnInit {
 
-  constructor() { }
+  param = { value: 'world' };
+  constructor(private translateService: TranslateService) { }
 
-  pageTitle = 'Administration page';
+  // pageTitle = 'Administration page';
 
   ngOnInit() {
   }

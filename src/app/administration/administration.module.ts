@@ -3,6 +3,7 @@ import { AdministrationRoutingModule } from './administration-routing.module';
 import { RouterModule } from '@angular/router';
 import { AdministrationComponent } from './administration.component';
 import { SharedModule } from '../shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { SharedModule } from '../shared/shared.module';
     //   { path: 'administration', component: AdministrationComponent}
     // ]),
     SharedModule,
-    AdministrationRoutingModule
+    AdministrationRoutingModule,
+    TranslateModule
   ],
   declarations: [AdministrationComponent],
   providers: [],

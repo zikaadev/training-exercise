@@ -5,11 +5,16 @@
         <mat-list>
           <mat-divider></mat-divider>
           <a mat-list-item routerLink="/home" routerLinkActive="active" (click)="sidenav.close()">
-            <span translate>Home</span>
+            <span translate>{{'nav.home' | translate}}</span>
           </a>
           <mat-divider></mat-divider>
           <a mat-list-item routerLink="/about" routerLinkActive="active" (click)="sidenav.close()">
-            <span translate>About</span>
+            <span translate>{{'nav.about' | translate}}</span>
+          </a>
+          <mat-divider></mat-divider>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/select" routerLinkActive="active" (click)="sidenav.close()">
+            <span translate>Select language</span>
           </a>
           <mat-divider></mat-divider>
         </mat-list>
@@ -23,5 +28,3 @@
   </mat-sidenav-container>
 
   <app-footer></app-footer>
-
-

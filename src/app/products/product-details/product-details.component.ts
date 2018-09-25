@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../../core/services/helper.service';
 import { Product } from '../../core/models/product';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-details',
@@ -9,11 +11,14 @@ import { Product } from '../../core/models/product';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  constructor(private helperService: HelperService) {
+  param = { value: 'world' };
+  constructor(
+    private helperService: HelperService,
+    private translateService: TranslateService) {
     this.products = this.helperService.getProduct();
   }
 
-  pageTitle = 'Check out our Products';
+  // pageTitle = 'Check out our Products';
   products: Product[];
 
 

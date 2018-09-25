@@ -1,19 +1,27 @@
 <div class="container">
-<hr>
+  <hr>
 
-<div>
-  <nav class="navbar navbar-expand navar-light bg-light">
-    <a [routerLink]="['/home']" class="navbar-brand">{{pageTitle}}</a>
-    <ul class="nav nav-pills">
-      <li><a [routerLink]="['./products']" class="navbar-link distance">Products</a></li>
-      <li><a [routerLink]="['/administration']" class="navbar-link distance">Administration</a></li>
-    </ul>
-  </nav>
-</div>
+  <div>
+    <nav class="navbar navbar-expand navar-light bg-light">
+      <a [routerLink]="['/home']" class="navbar-brand">{{'pageTitle' | translate:param }}</a>
+      <ul class="nav nav-pills">
+        <li><a [routerLink]="['./home']" class="navbar-link distance">{{'nav.home' | translate: param }}</a></li>
+        <li><a [routerLink]="['./products']" class="navbar-link distance">{{'nav.products' | translate: param }}</a></li>
+        <li><a [routerLink]="['/administration']" class="navbar-link distance">{{'nav.administration' |
+            translate:param}}</a></li>
+        <li>
+          <select style="float: right; margin-left: 600px;" (change)="setLanguage($event.target.value)">
+            <option value="defaultLang">{{'nav.selectLanguage' | translate: param}}</option>
+            <option value="en">{{'nav.english' | translate: param}}</option>
+            <option value="de">{{'nav.german' | translate: param}}</option>
+            <option value="sp">{{'nav.spanish' | translate: param}}</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-<hr>
+  <hr>
   <router-outlet></router-outlet>
 
 </div>
-
-

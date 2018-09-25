@@ -1,26 +1,26 @@
-{{pageTitle}}
+{{'nav.products' | translate: param}}
 <br><br>
 <div>
     <table>
         <thead>
-        <tr>
-            <th>id</th>
-            <th>title</th>
-            <th>description</th>
-            <th>price</th>
-            <th>image</th>
-            <th>quantity</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of products">
-            <td>{{product.id}}</td>
-            <td>{{product.title}}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.price}}</td>
-            <td><img src="../assets/images/{{product.image}}" height="50"></td>
-            <td>{{product.quantity}}</td>
-        </tr>
-    </tbody>
+            <tr>
+                <th>{{'products.id' | translate: param}}</th>
+                <th>{{'products.title' | translate: param}}</th>
+                <th>{{'products.description' | translate: param}}</th>
+                <th>{{'products.price' | translate: param}}</th>
+                <th>{{'products.image' | translate: param}}</th>
+                <th>{{'products.quantity' | translate: param}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+                <td><img src="../assets/images/{{product.image}}" height="50"></td>
+                <td>{{product.quantity}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>

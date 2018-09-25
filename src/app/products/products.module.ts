@@ -4,10 +4,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductsComponent } from './products.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     SharedModule,
+    TranslateModule,
     ProductsRoutingModule
     // RouterModule.forChild([
     //   { path: 'products', component: ProductsComponent}
