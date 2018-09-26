@@ -1,6 +1,6 @@
-{{'nav.products' | translate: param}}
-<br><br>
-<input type="text" [(ngModel)]="searchText" placeholder="{{'products.search' | translate: param}}">
+<!-- {{'nav.products' | translate: param}}
+<br><br>-->
+{{'products.search' | translate: param}}: <input type="text" [(ngModel)]="searchText" placeholder="{{'products.searchParam' | translate: param}}">
 <br><br>
 <div>
     <table>
@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of filteredProducts">
+            <tr *ngFor="let product of products | findByName: searchText">
                 <td>{{product.id}}</td>
                 <td>{{product.title | uppercase}}</td>
                 <td>{{product.description}}</td>

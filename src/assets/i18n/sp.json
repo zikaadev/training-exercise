@@ -19,5 +19,6 @@
     "products.price": "Precio",
     "products.image": "Imagen",
     "products.quantity": "Cantidad",
-    "products.search": "Elementos de búsqueda"
+    "products.search": "Elementos de búsqueda",
+    "products.searchParam": "comience a escribir"
 }

@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
+import { FindByName } from '../shared/pipes/find-by-name.pipe';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   ],
   declarations: [
     ProductsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    FindByName
   ],
   providers: [],
   exports: []

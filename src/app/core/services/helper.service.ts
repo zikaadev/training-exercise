@@ -1,10 +1,10 @@
 // import {} from '';
 import { Product } from '../models/product';
-import { IProduct } from '../../products/iproduct';
+import { IProduct } from '../interfaces/iproduct';
 
 export class HelperService {
 
-    products: IProduct[] = [
+    products: Product[] = [
         {
             id: 1,
             title: 'Cake',
@@ -87,7 +87,7 @@ export class HelperService {
         }
     ];
 
-    getProduct(): IProduct[] {
+    getProduct(): Product[] {
 
         return this.products;
     }

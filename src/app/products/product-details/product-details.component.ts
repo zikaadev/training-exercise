@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../../core/services/helper.service';
 import { Product } from '../../core/models/product';
 import { TranslateService } from '@ngx-translate/core';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { IProduct } from '../iproduct';
+import { IProduct } from '../../core/interfaces/iproduct';
+
 
 @Component({
   selector: 'app-product-details',
@@ -13,7 +13,7 @@ import { IProduct } from '../iproduct';
 export class ProductDetailsComponent implements OnInit {
 
   param = { value: 'world' };
-  filteredProducts: IProduct[];
+  filteredProducts: Product[];
   _searchText: string;
   get searchText(): string {
     return this._searchText;
@@ -32,15 +32,15 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   // pageTitle = 'Check out our Products';
-  products: IProduct[];
+  products: Product[];
 
 
   ngOnInit() {
   }
 
-  performFilter(filterBy: string): IProduct[] {
+  performFilter(filterBy: string): Product[] {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.products.filter((product: IProduct) => product.title.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    return this.products.filter((product: Product) => product.title.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 
 }

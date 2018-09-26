@@ -18,5 +18,6 @@
 	"products.price": "Price",
 	"products.image": "Image",
 	"products.quantity": "Quantity",
-	"products.search": "Search items"
+	"products.search": "Search items",
+	"products.searchParam": "Start typing"
 }
