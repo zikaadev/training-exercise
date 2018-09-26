@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -24,6 +25,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       // { path: 'home', component: HomeComponent },

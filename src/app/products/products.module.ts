@@ -5,12 +5,14 @@ import { ProductsComponent } from './products.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     SharedModule,
     TranslateModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    FormsModule
     // RouterModule.forChild([
     //   { path: 'products', component: ProductsComponent}
     // ])

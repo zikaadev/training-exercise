@@ -1,5 +1,7 @@
 {{'nav.products' | translate: param}}
 <br><br>
+<input type="text" [(ngModel)]="searchText" placeholder="{{'products.search' | translate: param}}">
+<br><br>
 <div>
     <table>
         <thead>
@@ -13,11 +15,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of products">
+            <tr *ngFor="let product of filteredProducts">
                 <td>{{product.id}}</td>
-                <td>{{product.title}}</td>
+                <td>{{product.title | uppercase}}</td>
                 <td>{{product.description}}</td>
-                <td>{{product.price}}</td>
+                <td>{{product.price | currency:'EUR':'symbol':'1.2-2'}}</td>
                 <td><img src="../assets/images/{{product.image}}" height="50"></td>
                 <td>{{product.quantity}}</td>
             </tr>

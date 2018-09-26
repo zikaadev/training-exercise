@@ -18,5 +18,6 @@
     "products.description": "Descripción",
     "products.price": "Precio",
     "products.image": "Imagen",
-    "products.quantity": "Cantidad"
+    "products.quantity": "Cantidad",
+    "products.search": "Elementos de búsqueda"
 }
