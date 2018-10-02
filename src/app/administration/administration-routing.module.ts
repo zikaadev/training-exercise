@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdministrationComponent } from './administration.component';
+import { Route } from '.../';
+import { extract } from '@app/core';
 
 const routes: Routes = [
-        { path: 'administration', component: AdministrationComponent }
+    Route.withShell([
+        { path: 'administration', component: AdministrationComponent, data: { title: extract('Administration') } }
+    ])
 ];
 
 

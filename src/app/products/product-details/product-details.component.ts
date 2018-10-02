@@ -8,13 +8,15 @@ import { IProduct } from '../../core/interfaces/iproduct';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css']
+  styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
 
   param = { value: 'world' };
   filteredProducts: Product[];
   _searchText: string;
+  modalState = false;
+  selectedProduct: Product;
   get searchText(): string {
     return this._searchText;
   }
@@ -43,4 +45,9 @@ export class ProductDetailsComponent implements OnInit {
     return this.products.filter((product: Product) => product.title.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 
+  displayDetails(product: Product) {
+    this.modalState = true;
+    this.selectedProduct = product;
+    console.log('modal displayed');
+  }
 }

@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { HomeRoutingModule } from './home-routing.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../core/shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from '@app/core';
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { TranslateModule } from '@ngx-translate/core';
         // ]),
         SharedModule,
         HomeRoutingModule,
-        TranslateModule
+        TranslateModule,
+        CoreModule
     ],
     declarations: [HomeComponent],
     providers: [],

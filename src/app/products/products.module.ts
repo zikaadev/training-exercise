@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductsComponent } from './products.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../core/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
-import { FindByName } from '../shared/pipes/find-by-name.pipe';
+import { FindByName } from '../core/shared/pipes/find-by-name.pipe';
+import { extract } from '@app/core';
 
 @NgModule({
   imports: [
@@ -14,14 +15,12 @@ import { FindByName } from '../shared/pipes/find-by-name.pipe';
     TranslateModule,
     ProductsRoutingModule,
     FormsModule
-    // RouterModule.forChild([
-    //   { path: 'products', component: ProductsComponent}
-    // ])
   ],
   declarations: [
     ProductsComponent,
     ProductDetailsComponent,
-    FindByName
+    FindByName,
+    // ProductModalComponent
   ],
   providers: [],
   exports: []

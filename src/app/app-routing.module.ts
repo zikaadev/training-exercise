@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { Route, extract } from './core';
 
-// const routes: Routes = [
-//     // Fallback when no prior route is matched
-//     // { path: '**', redirectTo: '', pathMatch: 'full' }
-// ];
+const routes: Routes = [
+    Route.withShell([{ path: 'home', loadChildren: 'app/home/home.component' }]),
+    { path: '', redirectTo: 'product', pathMatch: 'full' },
+    { path: '**', redirectTo: 'product', pathMatch: 'full' }
+];
 
 @NgModule({
-    imports: [RouterModule.forRoot([
-        { path: '', redirectTo: 'product', pathMatch: 'full' },
-        { path: '**', redirectTo: 'product', pathMatch: 'full' }
-    ])],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
     providers: []
 })

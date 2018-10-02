@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { HomeModule } from './home/home.module';
 import { NgxLocalStorageModule } from 'ngx-localstorage';
+import { MaterialModule } from './material.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,7 +27,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
+    CoreModule,
+    MaterialModule,
     HttpClientModule,
     RouterModule.forRoot([
       // { path: 'home', component: HomeComponent },

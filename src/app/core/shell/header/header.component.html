@@ -1,3 +1,33 @@
-<p>
-  header works!
-</p>
+<div class="container">
+  <hr>
+
+  <div>
+    <nav class="navbar navbar-expand navar-light bg-light">
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="./assets/images/logo.svg"></a>
+      <ul class="nav nav-pills">
+        <li><a [routerLink]="['./home']" class="navbar-link distance">{{'nav.home' | translate: param }}</a></li>
+        <li><a [routerLink]="['./products']" class="navbar-link distance">{{'nav.products' | translate: param }}</a></li>
+        <li><a [routerLink]="['/administration']" class="navbar-link distance">{{'nav.administration' |
+            translate:param}}</a></li>
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            {{ 'nav.selectLanguage' | translate: param}}
+          </button>
+          <div class="dropdown-menu ">
+            <button class="dropdown-item" style="width:100%;" type="button" (click)="setLanguage('en')">
+              {{'nav.english' | translate: param}}</button><br>
+            <button class="dropdown-item" style="width:100%;" type="button" (click)="setLanguage('de')">
+              {{ 'nav.german' | translate: param}}</button><br>
+            <button class="dropdown-item" style="width:100%;" type="button" (click)="setLanguage('sp')">
+              {{'nav.spanish' | translate: param}}</button>
+          </div>
+        </div>
+      </ul>
+
+    </nav>
+  </div>
+
+  <hr>
+  <router-outlet></router-outlet>
+</div>
